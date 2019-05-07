@@ -1,13 +1,13 @@
 .example-card {
-  max-width: 400px;
-  margin: 20px;
+  margin: 5px;
+  flex: 1 0 30vw;
+  max-width: 33vw;
 }
 
 .side{
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  order: 3;
 }
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
