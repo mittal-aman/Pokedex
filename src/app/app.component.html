@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}
+  </h1>
+  <img src="https://media.giphy.com/media/vsyKKf1t22nmw/giphy.gif" height="250px"/>
+</div>
+
+<div align="center">
+  <h3>Search for Pokemon</h3>
+
+  <input #newHero (keyup.enter)="searchPoke(newHero.value)" class="search">
+
+
+  <button (click)="searchPoke(newHero.value)">Search</button>
+
+<div class="side">
+  <mat-card class="example-card" *ngFor="let hero of heroes">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{hero.Name}}</mat-card-title>
+      <!-- <mat-card-subtitle>{{hero.Generation}}</mat-card-subtitle> -->
+    </mat-card-header>
+    <img mat-card-image src={{myArray[rand]}} alt="Photo of a Shiba Inu " height="250px">
+    <mat-card-content id="bodydesc" style="margin-left:auto; margin-right:auto; height: 40px; overflow-y: auto;">
+      <p id="desc" style="float:left;color: #666666;font-family: Candara,Trebuchet MS,sans-serif; font-size: 12px; font-weight: bold;line-height: 18px;">
+        {{hero.About}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
